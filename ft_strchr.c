@@ -6,7 +6,7 @@
 /*   By: txaba <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 12:26:36 by txaba             #+#    #+#             */
-/*   Updated: 2019/05/21 12:21:36 by txaba            ###   ########.fr       */
+/*   Updated: 2019/05/30 09:22:21 by txaba            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,13 @@ char	*ft_strchr(const char *str, int c)
 	int	i;
 
 	i = 0;
-	if ((char *)str == NULL)
-		return (NULL);
-	while (str[i])
+	while (str[i] != c)
 	{
-		if (str[i] == c)
+		if (str[i] == '\0')
 		{
-			return ((char *)str + i);
+			return (0);
 		}
 		i++;
 	}
-	return (NULL);
+	return ((char *)str + i);
 }
