@@ -6,7 +6,7 @@
 /*   By: txaba <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 13:39:46 by txaba             #+#    #+#             */
-/*   Updated: 2019/05/21 15:01:23 by txaba            ###   ########.fr       */
+/*   Updated: 2019/06/13 08:52:58 by txaba            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	i = 0;
 	hay = (char *)haystack;
 	nee = (char *)needle;
+	if (nee[i] == '\0')
+		return (hay);
 	while (hay[i])
 	{
 		j = 0;
